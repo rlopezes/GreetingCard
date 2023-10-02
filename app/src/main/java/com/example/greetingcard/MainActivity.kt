@@ -21,8 +21,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             GreetingCardTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    Greeting("Rubén")
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    Greeting("Rubén", Color(0xFFFF9900))
                 }
             }
         }
@@ -30,11 +33,11 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Surface(color = Color(0xFFFF9900) ) {
+fun Greeting(name: String, color : Color, modifier: Modifier = Modifier) {
+    Surface(color = color ) {
         Text(
             text = "Hola, me llamo $name!",
-            modifier = Modifier.padding(24.dp)
+            modifier = modifier.padding(24.dp)
         )
     }
 }
@@ -43,6 +46,14 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     GreetingCardTheme {
-        Greeting("Rubén")
+        Greeting("Rubén", Color(0xFFFF9900))
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun GreetingPreview2() {
+    GreetingCardTheme {
+        Greeting("Pepe", Color(0xFFFF0000))
     }
 }
