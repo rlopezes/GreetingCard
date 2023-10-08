@@ -49,11 +49,3 @@ fun GreetingPreview() {
         Greeting("Rubén", Color(0xFFFF9900))
     }
 }
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview2() {
-    GreetingCardTheme {
-        Greeting("Pepe", Color(0xFFFF0000))
-    }
-}
