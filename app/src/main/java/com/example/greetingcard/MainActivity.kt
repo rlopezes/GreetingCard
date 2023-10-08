@@ -46,6 +46,6 @@ fun Greeting(name: String, color : Color, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     GreetingCardTheme {
-        Greeting("Rubén", Color(0xFFFF9900))
+        Greeting("asdfasdf", Color(0xFFFF9900))
     }
 }
